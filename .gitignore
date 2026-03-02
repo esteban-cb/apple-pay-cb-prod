@@ -1,0 +1,22 @@
+# build output
+dist/
+.output/
+.vercel/
+
+# dependencies
+node_modules/
+
+# ⚠️ NEVER commit — contains real API credentials
+.env
+.env.local
+.env.production
+*.json.bak
+cdp_api_key*.json
+
+# logs
+*.log
+
+# editor
+.DS_Store
+.idea/
+.vscode/settings.json

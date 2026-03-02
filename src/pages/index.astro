@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ApplePayApp from '../components/ApplePayApp';
+---
+
+<Layout>
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 py-16">
+    <!-- Logo + title -->
+    <div class="flex items-center gap-3 mb-8">
+      <div class="w-10 h-10 rounded-xl bg-[#0052FF] flex items-center justify-center">
+        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 3a7 7 0 110 14A7 7 0 0112 5zm-2 4a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V10a1 1 0 00-1-1h-4z"/>
+        </svg>
+      </div>
+      <div>
+        <p class="text-xs text-gray-600 uppercase tracking-widest">Coinbase</p>
+        <h1 class="text-white font-bold text-lg leading-none">Onramp</h1>
+      </div>
+    </div>
+
+    <!-- Widget -->
+    <div class="w-full max-w-md">
+      <ApplePayApp client:only="react" />
+    </div>
+
+    <p class="mt-6 text-xs text-gray-700">
+      <a href="https://docs.cdp.coinbase.com/onramp/headless-onramp/overview" target="_blank" rel="noopener noreferrer" class="hover:text-gray-500 transition-colors">
+        API docs →
+      </a>
+    </p>
+  </div>
+</Layout>
